@@ -1,0 +1,110 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-4">
+    <h1 class="text-center">DashBoard</h1>
+    <div class="row mt-5">
+        <!-- filtro 1 -->
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3 class="text-center">Filtro 1</h3>
+                        Agua sin filtar que sale de la casa y trampa de gas.
+                    </div>
+                    <p><strong>Claridad(%): </strong>  <i>{{claridad_filtro1}}</i> </p> 
+                    <p><strong>Fecha y Hora: </strong> <i>{{fecha | date}}</i></p>
+                </div>
+                <!-- claridad entre 0 a 33 limpio -->
+                <div class="card-body d-flex justify-content-center">
+                    <div *ngIf="claridad_filtro1 > 66" class="gift-div">
+                        <img class="gift3" src="https://i.picasion.com/pic92/aaa91f13b29ba92d264ae19427a84665.gif" width="175" height="197.5" border="0" alt="https://picasion.com/" />
+                    </div>
+                </div>
+                <!-- claridad entre 0 a 33 medio sucio -->
+                <div class="card-body d-flex justify-content-center">
+                    <div *ngIf="claridad_filtro1 > 33 && claridad_filtro1 < 66" class="gift-div">
+                        <img class="gift2" src="https://i.picasion.com/pic92/7af54520ad9a77fe29ade22709b6bd83.gif" width="175" height="197.5" border="0" alt="https://picasion.com/" />
+                    </div>
+                </div>
+                <!-- claridad entre 0 a 33 super sucio -->
+                <div class="card-body d-flex justify-content-center">
+                    <div *ngIf="claridad_filtro1 >= 0 && claridad_filtro1 <= 33" class="gift-div">
+                        <img class="gift" src="https://i.picasion.com/pic92/9899d2696d957af40feecf84a8ec57be.gif" width="175" height="197.5" border="0" alt="https://picasion.com/" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- filtro 2 -->
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3 class="text-center">Filtro 2</h3>
+                        Agua despues de pasar por el jardín filtrante.
+                    </div>
+                        <p><strong>Claridad(%): </strong> <i>{{claridad_filtro2}}</i></p> 
+                        <p><strong>Fecha y Hora: </strong> <i>{{fecha | date}}</i></p>
+                </div>
+                <div class="card-body">
+                    <!-- claridad entre 0 a 33 limpio -->
+                    <div class="card-body d-flex justify-content-center ">
+                        <div *ngIf="claridad_filtro2 > 66" class="gift-div2">
+                            <img class="gift4" src="https://i.picasion.com/pic92/aaa91f13b29ba92d264ae19427a84665.gif" width="175" height="197.5" border="0" alt="https://picasion.com/" />
+                        </div>
+                    </div>
+                    <!-- claridad entre 0 a 33 medio sucio -->
+                    <div class="card-body d-flex justify-content-center">
+                        <div *ngIf="claridad_filtro2 > 33 && claridad_filtro2 < 66" class="gift-div2">
+                            <img class="gift2" src="https://i.picasion.com/pic92/7af54520ad9a77fe29ade22709b6bd83.gif" width="175" height="197.5" border="0" alt="https://picasion.com/" />
+                        </div>
+                    </div>
+                    <!-- claridad entre 0 a 33 super sucio -->
+                    <div class="card-body d-flex justify-content-center">
+                        <div *ngIf="claridad_filtro2 >= 0 && claridad_filtro2 <= 33" class="gift-div2">
+                            <img class="gift3" src="https://i.picasion.com/pic92/9899d2696d957af40feecf84a8ec57be.gif" width="175" height="197.5" border="0" alt="https://picasion.com/" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cantidad agua -->
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3 class="text-center">Cantidad Agua</h3>
+                        Cantidad de agua almacenada despues del filtrado.
+                    </div>
+                    <p><strong>Volumen(cm^3): </strong> <i>{{cantidad_agua}}</i> </p> 
+                    <p><strong>Fecha y Hora: </strong>  <i>{{fecha | date}}</i></p>
+                </div>
+                <div class="card-body">
+                    <!-- llenado tanque -->
+                   <div class="d-flex justify-content-center">
+                    <iframe src="https://giphy.com/embed/BnPy9HMDfkSYympqmP" width="175" height="173" ></iframe>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jardin filtrante -->
+    <div class="row mt-5 justify-content-center mb-5">
+        <div class="col-8 ">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3 class="text-center">Humedad Agua</h3>
+                        claridad_filtro1 de humedad de agua que se encuentra en el jardín filtrante.
+                    </div>
+                        <p><strong>Humedad(%): </strong>   <i>{{humedad_jardin}}</i></p> 
+                        <p><strong>Fecha y Hora: </strong> <i>{{fecha | date}}</i></p>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                        <iframe src="https://giphy.com/embed/3rpk3M3Pp8Xem2Lrqa" width="480" height="270" ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

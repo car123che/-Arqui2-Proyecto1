@@ -1,0 +1,30 @@
+.gift{
+    transform: translateY(-6em);
+}
+
+.gift2{
+    transform: translateY(-3em);
+}
+
+.gift3{
+    transform: translateY(-7em);
+}
+
+.gift4{
+    transform: translateY(-1em);
+}
+
+
+ /* tamaño cards  */
+.gift-div{
+    height: 4em;
+}
+
+.gift-div2{
+    height: 1em;
+}
+
+/* colores  */
+i{
+    color: black;
+}
