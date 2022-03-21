@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <ngx-charts-line-chart 
+    [customColors]="barChartcustomColors"
+     [legend]="legend"
+     [showXAxisLabel]="showXAxisLabel"
+     [showYAxisLabel]="showYAxisLabel" 
+     [xAxis]="true" [yAxis]="true" 
+     [autoScale]="true" [xAxisLabel]="xAxisLabel"
+     [yAxisLabel]="yAxisLabel" 
+     [results]="datosSuciedad" (select)="onSelect($event)" 
+     (activate)="onActivate($event)"
+     (deactivate)="onDeactivate($event)" style="fill: #d1d1d1;" 
+     [timeline]="false"
+     [view]="view"
+     [tooltipDisabled]="false"
+          >
+    </ngx-charts-line-chart>
+</div> 
